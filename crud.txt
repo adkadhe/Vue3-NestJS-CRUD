@@ -1,0 +1,7 @@
+1. Perform CRUD operation using JavaScript on employee details pages(Add/Edit/Listing)
+
+2. Add minimum 8 fields(any valid fields) in the database table(employee_master).. Note : Database to be used [ MySQL OR PostgreSQL]
+
+2. Add search & delete functionality on listing page.
+
+2. Use Node Js as the back end for performing all CRUD operations.

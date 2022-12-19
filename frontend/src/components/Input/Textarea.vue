@@ -1,0 +1,41 @@
+<script setup lang="ts">
+const props = defineProps<{
+  modelValue?: string;
+  label?: string;
+  name: string;
+  hintText?: string;
+  errors?: Partial<Record<string, string | undefined>>;
+}>();
+
+const emit = defineEmits<{
+  (e: "update:modelValue", value: string | null): void;
+}>();
+
+function handleInput(event: Event) {
+  const target = event.target as HTMLTextAreaElement;
+  emit("update:modelValue", target.value);
+}
+</script>
+
+<script lang="ts">
+export default {
+  inheritAttrs: false,
+};
+</script>
+
+<template>
+  <FormField
+    :label="props.label"
+    :name="props.name"
+    :hint-text="props.hintText"
+    :errors="props.errors"
+  >
+    <textarea
+      type="text"
+      :value="props.modelValue"
+      class="textarea textarea-bordered w-full"
+      v-bind="$attrs"
+      @input="handleInput"
+    />
+  </FormField>
+</template>
