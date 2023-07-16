@@ -1,5 +1,5 @@
 {
-  "name": "allied",
+  "name": "vue3-nestjs-crud",
   "version": "0.0.0",
   "private": true,
   "scripts": {
